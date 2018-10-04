@@ -18,14 +18,21 @@ html {
 }
 
 body {
-	background: $white;
+  background-color: #00bfc5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 900'%3E%3Cpath fill='%23A0E2DB' d='M0 489 0 899 1600 899 1600 120z'/%3E%3Cpath fill='%23CBF2F3' d='M1600 552 1600 899 0 899 0 165z'/%3E%3Cpath fill='%23719D71' d='M0 665 0 899 1600 899 1600 300z'/%3E%3Cpath fill='%237EB67E' d='M1600 704 1600 899 0 899 0 353z'/%3E%3Cpath fill='%23573b00' d='M0 773 0 899 1600 899 1600 625z'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-size: 448px/2 392px/2;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
 
+$containerWidth: 740px;
+
 .container {
   margin: 0 auto;
-  max-width: 740px;
+  max-width: $containerWidth;
   padding: 0 10px;
   width: 100%;
 }
@@ -201,8 +208,8 @@ img {
 }
 
 .site-description {
+  color: $darkGray;
   margin: -5px 0 0 0;
-  color: $gray;
   font-size: 16px;
 
   @include mobile {
@@ -240,6 +247,13 @@ nav {
 //
 // .main
 //
+#main {
+  $bw: 10px;
+  background: white;
+  border-radius: $bw;
+  width: calc(100% - 2 * #{$bw});
+  max-width: calc(#{$containerWidth} - 2 * #{$bw});
+}
 
 .posts > .post {
   padding-bottom: 2em;
@@ -273,9 +287,9 @@ nav {
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  // border-top: 1px solid #ddd;
+  // border-bottom: 1px solid #ddd;
+  // background-color: $lightGray;
 }
 
 footer {
